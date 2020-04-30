@@ -12,7 +12,7 @@ body {
     width: 80%;
     margin: auto;
     margin-top: auto;
-    margin-right: auto;
+    margin-right:auto ;
     margin-bottom: auto;
     margin-left: auto;
     overflow: hidden;
@@ -30,8 +30,9 @@ ul{
     border: 0px;
     padding-left: 20px;
     padding-right: 20px;
-    color: black
-    ;
+    color: black;
+    float: right;
+    margin-top: 25px;
 }
 .button1:hover{
     color:orangered;
@@ -45,10 +46,13 @@ ul{
     margin-top: 10px;
     margin-bottom: 10px;
     
-    
-     
 }
-
+#modal{
+    padding: 5px;
+    background: violet;
+    
+    
+}
 header {
     color: rgb(255, 255, 255);
     padding-top: 30px;
@@ -112,11 +116,8 @@ header a:hover{
 #contact h1{
     float: left;
 }
-#contact form {
-    float: right;
-    margin-top: 23px;
 
-}
+
 /*boxes*/
 #boxes{
     margin-left: 40px;
@@ -155,4 +156,61 @@ footer{
     text-align: center;
 
 }
+/*popup*/
+*, *::after, *::before{
+    
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
 
+ 
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.modal-header .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.modal-header .closing-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.modal-body{
+    padding: 10px 10px;
+}
+#overlay{
+   position: fixed;
+   opacity: 0;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, .5);
+   pointer-events: none;
+}
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
