@@ -8,7 +8,8 @@
         <meta name="author" content="kelvin mwenda">
 
         <title>Kiki flowers | Welcome</title>
-        <link rel="stylesheet" href="/home/kelvin/Desktop/acme/css/style.css"
+        <link rel="stylesheet" href="/home/kelvin/Desktop/acme/css/style.css">
+        <script defer src="script.js"></script>
     </head>
     <body>
       <header>
@@ -45,9 +46,29 @@
       <section id="contact">
           <div class="container">
               <h1>contact us</h1>
-              <form>
-                  <button type="submit" class="button1">Feedback</button>
-              </form>
+                  <button data-modal-target="#modal" class="button1">Feedback</button>
+                <div class="modal" id="modal">
+                    <div class="modal-header">
+                        <div class="title"> Example modal</div>
+                        <button data-close-button class="closing-button">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <label>Name</label><br>
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div>
+                            <label>Email</label><br>
+                            <input type="email" placeholder="email">
+                        </div>
+                        <div>
+                            <label>Message</label><br>
+                            <textarea name="message" id="textarea" cols="30" rows="10"></textarea><br>
+                            <button class="button1" type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="overlay"></div>
           </div>
       
       </section>

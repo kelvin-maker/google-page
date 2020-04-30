@@ -8,7 +8,8 @@
         <meta name="author" content="kelvin mwenda">
 
         <title>Kiki flowers | About</title>
-        <link rel="stylesheet" href="/home/kelvin/Desktop/acme/">
+        <link rel="stylesheet" href="/home/kelvin/Desktop/acme/css/style.css">
+        <script defer src="script.js"></script>
     </head>
     <body>
       <header>
@@ -33,9 +34,17 @@
       <section id="contact">
           <div class="container">
               <h1>contact us</h1>
-              <form>
-                  <button type="submit" class="button1">Feedback</button>
-              </form>
+              <button data-modal-target="#modal" class="button1">Feedback</button>
+              <div class="modal" id="modal" >
+                  <div class="modal-header">
+                      <div class="title"> Example modal</div>
+                      <button data-close-button class="closing-button">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt libero nesciunt officia praesentium tenetur pariatur quis fuga sint, magnam odio asperiores vel nulla amet voluptatibus, error, eveniet adipisci unde impedit et laudantium dolore delectus iusto velit sed. Tempora expedita illo inventore repellendus nulla numquam sed quaerat nemo saepe dolores modi, incidunt neque. Recusandae culpa placeat dignissimos odit quod cum ipsum veritatis reiciendis eos ducimus, architecto harum adipisci officiis laborum dolorum. Hic obcaecati quisquam, quos sequi expedita placeat incidunt explicabo praesentium.
+                  </div>
+              </div>
+              <div id="overlay"></div>
           </div>
       
       </section>
@@ -50,14 +59,13 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
               </article>
                 <aside id="side-bar">
-                 <div class="dark">
-                    
+                  <div class="dark">
                     <h3>What we do</h3>
                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
-              </aside>
+                  </div>
+                </aside>
               
-          </div>
+           </div>
       </section>
       <footer>
           <p>Kiki flowers, copyright &copy; 2020</p>
